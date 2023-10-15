@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!--heading-->
+            <p class="heading"><b>DOM Manipulation with Forms</b></p><br>
+            <form class="inputfiled" id="forms">
+    <!--First name-->
+                <label for="fname"><b>First name:</b></label><br>
+                <input type="text" id="fname" name="fname" required><br>
+    <!--Last name-->            
+                <label for="lname"><b>Last name:</b></label><br>
+                <input type="text" id="lname" name="lname" required><br>
+    <!--Address-->               
+                <label for="address"><b>Address:</b></label><br>
+                <input type="text" id="address" name="address" required><br>
+    <!--Pincode-->                 
+                <label for="pincode"><b>Pincode:</b></label><br>
+                <input type="number" id="pincode" name="pincode" required><br>
+    <!--Gender-->                
+                <label for="gender-select"><b>Gender :</b></label><br>
+                <select name="gender-select" id="gender-select">
+                    <option value="gender">--Please choose an option--</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>    
+                </select>
+    <!--food-->              
+                <p class="FoodCB"><b>Choice of food(must choose at least 2 out of 5 options):</b></p>
+                    <div class="options">
+                        <input type="checkbox" id="food1" value="noodels" name="Hongkong">
+                        <label for="noodels">Hongkong</label>
+                          <input type="checkbox" id="food2" value="Dosa" name="Indian">
+                        <label for="Dosa">Indian</label>
+                          <input type="checkbox" id="food3" value="pasta" name="Italian">
+                        <label for="Parota">Italian</label>          
+                          <input type="checkbox" id="food4" value="burger" name="American">
+                        <label for="Shawarma">American</label>
+                          <input type="checkbox" id="food5" value="FriedRice" name="Chinese">
+                        <label for="FriedRice">Chinese</label>
+                        </div>
+    <!--State-->                       
+                <label for="state"><b>State :</b></label><br>
+                <input type="text" id="state" name="state" required><br>
+    <!--Country-->                  
+                <label for="country"><b>Country :</b></label><br>
+                <input type="text" id="country" name="country" required><br><br>
+    <!--Submit Button-->              
+                <input type="button" class="btn btn-secondary" value="Submit" onclick={validate()}>
+                <input type="reset" class="btn btn-secondary" value="reset" onclick="">
+            </form><br>
+            <div>
+    <!--Table to filled when submited-->                  
+                <table class="table" id="datastored">
+                    <thead class="thead-dark">  
+                      <tr>
+                        <th scope="col">First name</th>
+                        <th scope="col">Last name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Pincode</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">choice of food</th>
+                        <th scope="col">State</th>
+                        <th scope="col">Country</th>
+                      </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>          
+  <script src="script.js"></script>
+</body>
+</html>
